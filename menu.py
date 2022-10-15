@@ -1,6 +1,6 @@
 import os
-import komplex
 import Rational
+import komplex
 
 def menu() -> int:
     while True:
@@ -13,7 +13,7 @@ def menu() -> int:
             akt = action(numbers)
             if akt == 0:
                 continue
-            elif 0 < akt < 8:
+            elif 0 < akt < 9:
                 Rational.original(akt)
             else:
                 print("Такого пункта меню нет")
@@ -54,6 +54,7 @@ def action(flag: int):
                             "5. Ввозведение в степень\n"
                             "6. Деление на целое\n"
                             "7. Остаток от деления\n"
+                            "8. Корень числа со степенью\n"
                             "0. Выход\n"))
         else:
             act = int(input("Выберите действие: \n"
