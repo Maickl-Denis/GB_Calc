@@ -1,11 +1,11 @@
 import os
 import komplex
+import Rational
 
 def menu() -> int:
     while True:
         os.system('cls' if os.name == 'nt' else 'clear')
         numbers = numeric()
-        print(f'{numbers = }')
         if numbers == 0:
             break
         elif numbers == 1:
@@ -14,7 +14,7 @@ def menu() -> int:
             if akt == 0:
                 continue
             elif 0 < akt < 8:
-                print(f'{akt = }')
+                Rational.original(akt)
             else:
                 print("Такого пункта меню нет")
         elif numbers == 2:
